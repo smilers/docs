@@ -5,26 +5,9 @@
 @import "@primer/css/labels/index.scss";
 @import "@primer/css/avatars/avatar.scss";
 
-$marketing-font-path: "/dist/fonts/";
-@import "@primer/css/marketing/index.scss";
-
-// Additional styles
-@import "new-mktg.scss";
-@import "type.scss";
-@import "nav.scss";
-@import "article.scss";
-@import "search.scss";
-@import "overrides.scss";
-@import "sidebar.scss";
-@import "scroll-button.scss";
-@import "explorer.scss";
-@import "syntax-highlighting.scss";
-@import "tables.scss";
-@import "opacity.scss";
-@import "print.scss";
+@import "extended-markdown.scss";
+@import "headings.scss";
+@import "images.scss";
 @import "shadows.scss";
-@import "product-landing.scss";
-@import "dev-toc.scss";
-@import "gradient.scss";
-@import "product-sublanding.scss";
-@import "release-notes.scss";
+@import "syntax-highlighting.scss";
+@import "utilities.scss";

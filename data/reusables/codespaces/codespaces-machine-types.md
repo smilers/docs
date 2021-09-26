@@ -1,5 +1,1 @@
-Being able to switch machine types gives you the flexibility you need to choose appropriate resources to fit the work you are doing. As a guide, you might choose different machine types for these tasks:
-
-* **Basic** for updating a file and raising a pull request
-* **Standard** for editing a website
-* **Premium** for high compute tasks such as data analysis
+You can run your codespace on a choice of remote machine, from 2 cores to 32 cores. Each of these has a different level of resources and a different billing tier. For information, see "[About billing for Codespaces](/github/developing-online-with-codespaces/about-billing-for-codespaces)."

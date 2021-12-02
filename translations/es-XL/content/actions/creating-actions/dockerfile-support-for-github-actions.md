@@ -60,14 +60,14 @@ ENTRYPOINT ["sh", "-c", "echo $GITHUB_SHA"]
  Para proporcionar el `args` que se definió en el archivo de metadatos de la acción en un contenedor de Docker que utiliza la forma _exec_ en el `ENTRYPOINT`, recomendamos crear un script de shell llamado `entrypoint.sh` al que puedas llamar desde la instrucción `ENTRYPOINT`:
 
 ##### *Dockerfile* de ejemplo
-``` 
+```
 # Container image that runs your code
 FROM debian:stretch-slim
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
-# Executes `entrypoint.sh` when the Docker container starts up 
+# Executes `entrypoint.sh` when the Docker container starts up
 ENTRYPOINT ["/entrypoint.sh"]
 ```
 
@@ -78,14 +78,14 @@ Al utilizar el Dockerfile de ejemplo que se muestra anteriormente, {% data varia
 ``` sh
 #!/bin/sh
 
-# `$*` expands the `args` supplied in an `array` individually 
+# `$*` expands the `args` supplied in an `array` individually
 # or splits `args` in a string separated by whitespace.
 sh -c "echo $*"
 ```
 
 Tu código debe ser ejecutable. Asegúrate que el archivo `entrypoint.sh` tiene permisos de `execute` antes de utilizarlo en un flujo de trabajo. Puedes modificar los permisos de tu terminal si utilizas este comando:
   ``` sh
-  chmod +x entrypoint.sh    
+  chmod +x entrypoint.sh
   ```
 
 Cuando un script de shell de `ENTRYPOINT` no es ejecutable, recibirás un error similar al siguiente:
